@@ -14,22 +14,20 @@
   --tint-dark-3: 0, 0%, 0%, .9;
   --tint-dark-2: 0, 0%, 0%, .85;
   --tint-dark-1: 0, 0%, 0%, .8;
-
 }
 
 body {
-    color: hsla(var(--font-color));
-    font-family: var(--font-type);
-    font-weight: 700;
-
+  color: hsla(var(--font-color));
+  font-family: var(--font-type);
+  font-weight: 700;
 }
 
 header{
-    height: 100vh;
-    background-image: linear-gradient(hsla(var(--tint-dark-5)), hsla(var(--tint-dark-4)),hsla(var(--tint-dark-3)), hsla(var(--tint-dark-2)), hsla(var(--tint-dark-1))), url(/images/backgroundimage.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(hsla(var(--tint-dark-5)), hsla(var(--tint-dark-4)),hsla(var(--tint-dark-3)), hsla(var(--tint-dark-2)), hsla(var(--tint-dark-1))), url(/images/backgroundimage.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-box {
@@ -45,19 +43,18 @@ header{
 .border{
   padding-block: .8%;
   padding-inline: 2%;
-  border: white solid 2px;
-
+  border: hsl(0, 0%, 100%) solid 2px;
 }
 
 .tickets {
   margin-top: 35vh;
 }
 
-@supports (display: grid){
+/* @supports (display: grid){
+
   .container{
     display: grid;
     grid-template-rows: min-content 3fr 1.5fr;
-    
   }
 
   .text-box {
@@ -67,13 +64,13 @@ header{
 
   .motto{
     margin-block-start: clamp(3rem, 5vw, 5rem);
-    
   }
 
   .tickets{
     align-self: center;
   }
-}
+
+} */
 
 
 
@@ -87,31 +84,32 @@ header{
     margin-block-start: 30%;
   }
 
-  @supports (display: grid){
-  .container{
-    display: grid;
-    grid-template-rows: min-content 3fr 1.5fr;
-    
-  }
+  /* @supports (display: grid){
 
- .nav-bar{
-  margin: 0;
- }
+    .container{
+      display: grid;
+      grid-template-rows: .5fr 3fr 1.5fr;
+    }
 
-  .text-box {
-    text-align: center;
-    margin: 0;
-  }
+    .nav-bar{
+      margin: 0;
+    }
 
-  .motto{
-    margin-block-start: clamp(3rem, 5vw, 5rem);
-    
-  }
+    .text-box {
+      text-align: center;
+      margin: 0;
+    }
 
-  .tickets{
-    align-self: center;
-  }
-}
+    .motto{
+      margin-block-start: clamp(5rem, 7vw, 7.5rem);
+    }
+
+    .tickets{
+      align-self: center;
+
+    }
+
+  }  */
 
 }
 

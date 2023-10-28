@@ -46,7 +46,7 @@ nav li {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
     display: block;
-    background: white;
+    background: hsl(0, 0%, 100%);
     height: 4.5px;
     width: 2rem;
     border-radius: 2px;
@@ -74,7 +74,7 @@ nav li {
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span {
-    background-color: rgba(68, 67, 64, 0.8);
+    background-color: hsla(45, 3%, 26%, 0.8);
 }
 
 /* adding animation to hamburguer/close icon */
@@ -106,12 +106,12 @@ nav li {
     .menu-wrapper {  
     font-size: var(--fluid-font-sizes-menu);
     display: flex;
-    height:fit-content;
+    height:clamp(4rem, 5vw, 5rem);
     justify-content: space-around;
     }
 
     li:hover{
-        border-bottom: white solid 2px;
+        border-bottom: hsl(0, 0%, 100%) solid 2px;
     }
    
   }
