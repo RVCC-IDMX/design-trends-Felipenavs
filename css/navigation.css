@@ -106,7 +106,7 @@ nav li {
     .menu-wrapper {  
     font-size: var(--fluid-font-sizes-menu);
     display: flex;
-    height:clamp(4rem, 5vw, 5rem);
+    height:clamp(3.2rem, 4.2vw, 5rem);
     justify-content: space-around;
     }
 
