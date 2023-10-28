@@ -1,0 +1,117 @@
+:root{
+    --animation-curve: cubic-bezier(1,0,0,1);
+}
+
+nav {
+    background-color: hsla(208, 90%, 45%, 0);
+    width: 50%;
+    text-align: left;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+ul {
+    margin-block: 0;
+}
+
+nav ul {
+    padding-bottom: 1rem;
+    list-style: none;
+
+}
+
+nav li {
+    text-align: left;
+    padding-top:1em;
+    margin-left: 1em;
+}
+
+/* adding hamburguer icon */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    right:0;
+    height: 10%;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 4.5px;
+    width: 2rem;
+    border-radius: 2px;
+    position: relative;
+    transition: all 500ms var(--animation-curve);
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 10px;
+}
+
+.nav-toggle-label span::after {
+    top: 10px;
+}
+
+/* adding animation to the navbar section */
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+    background-color: rgba(68, 67, 64, 0.8);
+}
+
+/* adding animation to hamburguer/close icon */
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+    transform:rotate(41deg);
+    transform-origin: left top;
+
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+    transform:rotate(-41deg);
+    transform-origin: left bottom;
+    
+}
+
+.nav-toggle ~ label {
+    transition: all 250ms var(--animation-curve);
+}
+
+@media screen and ( min-width: 834px) {
+
+    .nav-toggle-label {
+      display: none;
+     }
+    nav, ul, li {
+      all:unset;
+    }
+
+    .menu-wrapper {  
+    font-size: var(--fluid-font-sizes-menu);
+    display: flex;
+    height:fit-content;
+    justify-content: space-around;
+    }
+
+    li:hover{
+        border-bottom: white solid 2px;
+    }
+   
+  }
